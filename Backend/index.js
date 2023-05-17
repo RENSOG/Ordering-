@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const nodemailer = require("nodemailer"); // Import nodemailer module
+const messagebird = require('messagebird').initClient('PZVwDIPKlouu8815RYcfKqGO0')
+
+
 
 app.use(cors());
 app.use(express.json()); // Add this middleware to parse JSON request bodies
@@ -61,6 +64,8 @@ app.post("/email", (req, res) => {
       res.status(200).send("Email sent successfully");
     }
   });
+
+  
 });
 
 app.listen(2000, () => {

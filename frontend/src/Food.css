@@ -1,6 +1,8 @@
 body {
-    background-color: #f8f9fa;
-    color: #000;
+    background-color: #000000;
+    color: #ffffff;
+    height: auto;
+
   }
   
   .dark-mode body {
@@ -49,14 +51,31 @@ body {
   }
   
   .dark-mode .card-header {
-    background-color: #212529;
+    background-color: #000000;
   }
   
   .card-body {
-    background-color: #fff;
+    background-color: #fbfbfb
   }
   
   .dark-mode .card-body {
-    background-color: #333;
+    background-color: #000000;
+  }
+  .food-image {
+    height: 200px; /* Set the desired height for the image */
+}
+
+
+.card-img-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .food-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .food-image:hover {
+    transform: scale(1.2);
   }
   

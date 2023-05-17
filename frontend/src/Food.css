@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+    color: #000;
+  }
+  
+  .dark-mode body {
+    background-color: #212529;
+    color: #fff;
+  }
+  
+  .container {
+    background-color: #fff;
+  }
+  
+  .dark-mode .container {
+    background-color: #333;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .dark-mode .button {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .dark-mode .button:hover {
+    background-color: #ccc;
+  }
+  
+  .card {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .dark-mode .card {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+  }
+  
+  .dark-mode .card-header {
+    background-color: #212529;
+  }
+  
+  .card-body {
+    background-color: #fff;
+  }
+  
+  .dark-mode .card-body {
+    background-color: #333;
+  }
+  

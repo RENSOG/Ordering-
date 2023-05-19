@@ -2,6 +2,7 @@ body {
     background-color: #000000;
     color: #ffffff;
     height: auto;
+    transform: scale(0.97);
 
   }
   
@@ -12,6 +13,7 @@ body {
   
   .container {
     background-color: #fff;
+   
   }
   
   .dark-mode .container {

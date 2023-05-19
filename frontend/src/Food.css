@@ -1,68 +1,27 @@
+
+
 body {
-    background-color: #000000;
-    color: #ffffff;
-    height: auto;
-    transform: scale(0.97);
+  
+ 
+    margin: 0;
+    padding: 0;
+    
+   
 
   }
-  
-  .dark-mode body {
-    background-color: #212529;
-    color: #fff;
-  }
-  
-  .container {
-    background-color: #fff;
-   
-  }
-  
-  .dark-mode .container {
-    background-color: #333;
-  }
-  
-  .button {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  .dark-mode .button {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  .dark-mode .button:hover {
-    background-color: #ccc;
-  }
-  
-  .card {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  .dark-mode .card {
+
+  .body.dark-mode {
     background-color: #333;
     color: #fff;
   }
   
-  .card-header {
-    background-color: #f8f9fa;
+  .body.dark-mode .card {
+    background-color: #444;
+    color: #fff;
   }
   
-  .dark-mode .card-header {
-    background-color: #000000;
-  }
   
-  .card-body {
-    background-color: #fbfbfb
-  }
-  
-  .dark-mode .card-body {
-    background-color: #000000;
-  }
+
   .food-image {
     height: 200px; /* Set the desired height for the image */
 }
@@ -80,4 +39,8 @@ body {
   .food-image:hover {
     transform: scale(1.2);
   }
+  
+
+
+
   

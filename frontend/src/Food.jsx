@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Food = () => {
     const [cartItems, setCartItems] = useState([]);
-    const [darkMode, setDarkMode] = useState(false);
+
     const [userDetails, setUserDetails] = useState({
         name: "",
         address: "",
@@ -121,20 +121,27 @@ const Food = () => {
         setCartItems(updatedCartItems);
     };
 
+    const [darkMode, setDarkMode] = useState(false); // State for dark mode
 
+    // Toggle dark mode
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
     };
 
     return (
-        <div className={`container${darkMode ? " dark-mode" : ""}`} style={{ backgroundColor: "black" }}>
-            <div className="text-end mt-2">
-                <button className="btn btn-secondary" onClick={toggleDarkMode}>
-                    Toggle Dark Mode
-                </button>
+        <div className={`body ${darkMode ? "dark-mode" : ""}`} style={{ marginTop: "-25px" }}>
+            <br></br>
+            <div className="text-center mt-4">
+
             </div>
-            <h1 className="mt-3">Cuddalore Fish Ordering App</h1>
-            <div className="row mt-4">
+            <h1 className="mt-3 text-center" style={{ fontFamily: "fantasy", borderRadius: "30px" }}>Cuddalore Fish Ordering App<i class="bi bi-egg-fried"></i>&nbsp;&nbsp;<button
+                className={`btn ${darkMode ? "btn-light" : "btn-dark"}`}
+                onClick={toggleDarkMode}
+            >
+                {darkMode ? "Light Mode" : "Dark Mode"}
+            </button></h1>
+            <br></br>
+            <div className="row mt-4 p-5">
                 {/* Food Item 1 */}
                 <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div className="card shadow rounded-5">
@@ -259,46 +266,47 @@ const Food = () => {
 
                 {/* Add more food items as needed */}
             </div>
-            <div className="mt-4">
-    <h2>Cart</h2>
-    <div className="row">
-        {cartItems.map((item) => (
-            <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">{item.name}</h5>
-                        <p className="card-text">Price: ${item.price}</p>
-                        <p className="card-text">Quantity: {item.quantity}</p>
-                        <button type="button" className="btn btn-outline-success position-relative" onClick={() => incrementQuantity(item)}>
-                            {item.name}
-                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                {item.quantity}
-                                <span className="visually-hidden">Quantity</span>
-                            </span>
-                        </button>&nbsp;&nbsp;&nbsp;
-                        <button
-                            className="btn btn-outline-danger"
-                            onClick={() => removeFromCart(item)}
-                        >
-                            Delete
-                        </button>
-                    </div>
+            <div className="mt-4 p-5 ">
+                <h2 >Cart</h2>
+                <div className="row p-5">
+
+                    {cartItems.map((item) => (
+                        <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">{item.name}</h5>
+                                    <p className="card-text">Price: ${item.price}</p>
+                                    <p className="card-text">Quantity: {item.quantity}</p>
+                                    <button type="button" className="btn btn-outline-success position-relative" onClick={() => incrementQuantity(item)}>
+                                        {item.name}
+                                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            {item.quantity}
+                                            <span className="visually-hidden">Quantity</span>
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;
+                                    <button
+                                        className="btn btn-outline-danger"
+                                        onClick={() => removeFromCart(item)}
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-        ))}
-    </div>
-</div>
 
-            <div className="card mb-2">  
-                 <div className="card-body">
-                <h3 className="card-title">Order Summary <i class="bi bi-egg-fried"></i></h3>
+            <div className="card mb-2 p-5">
+                <div className="card-body ">
+                    <h3 className="card-title">Order Summary </h3>
 
-                <p className="card-text-success">Total Quantity:<i class="bi bi-egg-fill"></i> {totalQuantity}</p>
-                <p>Total Cost: ${totalCost}</p>
-            </div></div>
+                    <p className="card-text-success">Total Quantity: {totalQuantity}</p>
+                    <p>Total Cost: ${totalCost}</p>
+                </div></div>
 
             {/* Checkout Form */}
-            <div className="mt-4">
+            <div className="mt-4 p-5" >
                 <h2>Checkout</h2>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">
@@ -352,11 +360,12 @@ const Food = () => {
                         onChange={handleInputChange}
                     />
                 </div>
-                <button className="btn btn-info" onClick={handleCheckout}>
+                <button className="btn btn-info text-center" onClick={handleCheckout}>
                     Place Order
                 </button>
                 <br></br>&nbsp;
             </div>
+
             <ToastContainer position="top-center" />
         </div>
     );

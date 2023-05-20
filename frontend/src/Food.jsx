@@ -4,9 +4,11 @@ import "./Food.css";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const Food = () => {
     const [cartItems, setCartItems] = useState([]);
+    const navigate = useNavigate();
 
     const [userDetails, setUserDetails] = useState({
         name: "",
@@ -51,6 +53,13 @@ const Food = () => {
             ...userDetails,
             [e.target.name]: e.target.value,
         });
+    };
+
+    const handleLogout = () => {
+        // Perform logout logic here, such as clearing user session or token
+        localStorage.removeItem("token");
+        // Redirect to login page
+        navigate("/");
     };
 
     const handleCheckout = () => {
@@ -364,7 +373,11 @@ const Food = () => {
                 <button className="btn btn-info text-center" onClick={handleCheckout}>
                     Place Order
                 </button>
+                <button className="btn btn-danger m-2" onClick={handleLogout}>
+                    Logout
+                </button>
                 <br></br>&nbsp;
+               
             </div>
 
             <ToastContainer position="top-center" />

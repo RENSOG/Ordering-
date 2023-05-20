@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: cursive;
-  background-color: rgb(244, 238, 230);
-
+ 
+ 
 
 
 }
@@ -71,12 +71,13 @@ body {
 
 .card-1 {
   transform: scale(0.9);
-  background-color: #e1d7d7;
+  background-color: #372a2a;
   border-radius: 20px;
 }
 
 .dark-mode .card-1 {
-  background-color: #333;
+  background-color: #534f4f;
+  color: white;
 
 }
 
@@ -90,6 +91,8 @@ body {
 
 .card {
   transition: transform 0.3s ease-in;
+  color: black;
+  background-color: #f5ebeb;
 }
 
 .dark-mode .card:hover {

@@ -4,9 +4,11 @@ import "./Food.css";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const Food = () => {
     const [cartItems, setCartItems] = useState([]);
+    const navigate = useNavigate();
 
     const [userDetails, setUserDetails] = useState({
         name: "",
@@ -51,6 +53,13 @@ const Food = () => {
             ...userDetails,
             [e.target.name]: e.target.value,
         });
+    };
+
+    const handleLogout = () => {
+        // Perform logout logic here, such as clearing user session or token
+        localStorage.removeItem("token");
+        // Redirect to login page
+        navigate("/");
     };
 
     const handleCheckout = () => {
@@ -131,9 +140,7 @@ const Food = () => {
     return (
         <div className={`body ${darkMode ? "dark-mode" : ""}`} style={{ marginTop: "-25px" }}>
             <br></br>
-            <div className="text-center mt-4">
-
-            </div>
+          <br></br>
             <h1 className="mt-3 text-center" style={{ fontFamily: "fantasy", borderRadius: "30px" }}>Cuddalore Fish Ordering App<i class="bi bi-egg-fried"></i>&nbsp;&nbsp;<button
                 className={`btn ${darkMode ? "btn-light" : "btn-dark"}`}
                 onClick={toggleDarkMode}
@@ -266,13 +273,14 @@ const Food = () => {
 
                 {/* Add more food items as needed */}
             </div>
-            <div className="mt-4 p-5 ">
-                <h2 >Cart</h2>
+            <div className=" cart mt-4 shadow ">
+
                 <div className="row p-5">
+                    <h2 >Cart</h2>
 
                     {cartItems.map((item) => (
                         <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                            <div className="card">
+                            <div className="card shadow">
                                 <div className="card-body">
                                     <h5 className="card-title">{item.name}</h5>
                                     <p className="card-text">Price: ${item.price}</p>
@@ -295,15 +303,17 @@ const Food = () => {
                         </div>
                     ))}
                 </div>
+            </div><br></br>
+
+            <div className="card-1 shadow mb-2">
+                <div className="card-body p-5">
+                    <h3 className="card-title">Order Summary</h3>
+                    <br></br>
+                    <p className="card-text-success">Total Quantity: {totalQuantity}</p>
+                    <p className="total-cost">Total Cost: <span className="cost-pill">${totalCost.toFixed(2)}</span></p>
+                </div>
             </div>
 
-            <div className="card mb-2 p-5">
-                <div className="card-body ">
-                    <h3 className="card-title">Order Summary </h3>
-
-                    <p className="card-text-success">Total Quantity: {totalQuantity}</p>
-                    <p>Total Cost: ${totalCost}</p>
-                </div></div>
 
             {/* Checkout Form */}
             <div className="mt-4 p-5" >
@@ -363,7 +373,11 @@ const Food = () => {
                 <button className="btn btn-info text-center" onClick={handleCheckout}>
                     Place Order
                 </button>
+                <button className="btn btn-danger m-2" onClick={handleLogout}>
+                    Logout
+                </button>
                 <br></br>&nbsp;
+               
             </div>
 
             <ToastContainer position="top-center" />

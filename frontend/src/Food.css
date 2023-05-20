@@ -1,46 +1,103 @@
-
-
 body {
-  
+
+
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
  
-    margin: 0;
-    padding: 0;
-    
-   
+ 
 
-  }
 
-  .body.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .body.dark-mode .card {
-    background-color: #444;
-    color: #fff;
-  }
-  
-  
+}
 
-  .food-image {
-    height: 200px; /* Set the desired height for the image */
+
+
+.total-cost {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: buttonhighlight;
+}
+
+.cost-pill {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+
+.dark-mode .total-cost {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+
+
+.body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.body.dark-mode .card {
+  background-color: #444;
+  color: #fff;
+}
+
+
+
+.food-image {
+  height: 200px;
+  /* Set the desired height for the image */
 }
 
 
 .card-img-container {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .food-image {
-    transition: transform 0.3s ease;
-  }
-  
-  .food-image:hover {
-    transform: scale(1.2);
-  }
-  
+  overflow: hidden;
+  position: relative;
+}
+
+.food-image {
+  transition: transform 0.3s ease;
+}
+
+.food-image:hover {
+  transform: scale(1.2);
+}
 
 
 
-  
+.card-1 {
+  transform: scale(0.9);
+  background-color: #372a2a;
+  border-radius: 20px;
+}
+
+.dark-mode .card-1 {
+  background-color: #534f4f;
+  color: white;
+
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: black;
+  color: #fff;
+
+
+}
+
+.card {
+  transition: transform 0.3s ease-in;
+  color: black;
+  background-color: #f5ebeb;
+}
+
+.dark-mode .card:hover {
+
+  background-color: white;
+  color: black;
+
+}

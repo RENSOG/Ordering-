@@ -71,7 +71,7 @@ body {
 
 .card-1 {
   transform: scale(0.9);
-  background-color: #372a2a;
+  background-color: #bda6a6;
   border-radius: 20px;
 }
 
@@ -100,4 +100,8 @@ body {
   background-color: white;
   color: black;
 
+}
+
+ .total-cost{
+  color:black;
 }

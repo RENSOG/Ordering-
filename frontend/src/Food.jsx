@@ -141,7 +141,7 @@ const Food = () => {
         <div className={`body ${darkMode ? "dark-mode" : ""}`} style={{ marginTop: "-25px" }}>
             <br></br>
           <br></br>
-            <h1 className="mt-3 text-center" style={{ fontFamily: "fantasy", borderRadius: "30px" }}>Cuddalore Fish Ordering App<i class="bi bi-egg-fried"></i>&nbsp;&nbsp;<button
+            <h1 className="mt-3 text-center" style={{ fontFamily: "fantasy", borderRadius: "30px" }}>Cuddalore Fish Ordering App&nbsp;<i class="bi bi-egg-fried"></i>&nbsp;&nbsp;<button
                 className={`btn ${darkMode ? "btn-light" : "btn-dark"}`}
                 onClick={toggleDarkMode}
             >
@@ -161,7 +161,7 @@ const Food = () => {
                         </div>
                         <div className="card-body  rounded-5">
                             <h5 className="card-title" style={{ fontFamily: "cursive" }}>
-                                Strawberry
+                                Strawberry<i class="bi bi-egg-fill"></i>
                             </h5>
                             <p className="card-text">Price: $15</p>
                             <button className="btn btn-success" onClick={() => addToCart({ id: 1, name: "Strawberry", price: 15 })}>
@@ -182,7 +182,7 @@ const Food = () => {
                             />
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Mutton Fry</h5>
+                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Mutton Fry<i class="bi bi-egg-fill"></i></h5>
                             <p className="card-text">Price: $35</p>
                             <button className="btn btn-success" onClick={() => addToCart({ id: 2, name: "Mutton Fry", price: 35 })}>
                                 Add to Cart
@@ -202,7 +202,7 @@ const Food = () => {
                             />
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Fire Burger</h5>
+                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Fire Burger<i class="bi bi-egg-fill"></i></h5>
                             <p className="card-text">Price: $305</p>
                             <button className="btn btn-success" onClick={() => addToCart({ id: 3, name: "Fire Burger", price: 305 })}>
                                 Add to Cart
@@ -222,7 +222,7 @@ const Food = () => {
                             />
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Pizza</h5>
+                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Pizza<i class="bi bi-egg-fill"></i></h5>
                             <p className="card-text">Price: $350</p>
                             <button className="btn btn-success" onClick={() => addToCart({ id: 4, name: "Pizza", price: 350 })}>
                                 Add to Cart
@@ -242,7 +242,7 @@ const Food = () => {
                             />
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Burger</h5>
+                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Burger<i class="bi bi-egg-fill"></i></h5>
                             <p className="card-text">Price: $35</p>
                             <button className="btn btn-success" onClick={() => addToCart({ id: 5, name: "Burger", price: 35 })}>
                                 Add to Cart
@@ -261,7 +261,7 @@ const Food = () => {
                             />
                         </div>
                         <div className="card-body">
-                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Chicken</h5>
+                            <h5 className="card-title" style={{ fontFamily: "cursive" }}>Chicken<i class="bi bi-egg-fill"></i></h5>
                             <p className="card-text">Price: $100</p>
                             <button className="btn btn-success" onClick={() => addToCart({ id: 6, name: "Chicken", price: 100 })}>
                                 Add to Cart

@@ -156,7 +156,7 @@ const Food = () => {
       <br></br>
       <h1
         className="mt-3 text-center"
-        style={{ fontFamily: "fantasy", borderRadius: "30px" }}
+        style={{ fontFamily: "fantasy" }}
       >
         Cuddalore Fish Ordering App&nbsp;<i class="bi bi-egg-fried"></i>
         &nbsp;&nbsp;

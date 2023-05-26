@@ -190,7 +190,7 @@ const Food = () => {
                   addToCart({ id: 1, name: "Strawberry", price: 15 })
                 }
               >
-                Add to Cart
+                Add to Cart&nbsp;<i class="bi bi-cart-plus-fill"></i>
               </button>
             </div>
           </div>
@@ -217,7 +217,7 @@ const Food = () => {
                   addToCart({ id: 2, name: "Mutton Fry", price: 35 })
                 }
               >
-                Add to Cart
+                Add to Cart&nbsp;<i class="bi bi-cart-plus-fill"></i>
               </button>
             </div>
           </div>
@@ -244,7 +244,7 @@ const Food = () => {
                   addToCart({ id: 3, name: "Fire Burger", price: 305 })
                 }
               >
-                Add to Cart
+                Add to Cart&nbsp;<i class="bi bi-cart-plus-fill"></i>
               </button>
             </div>
           </div>
@@ -269,7 +269,7 @@ const Food = () => {
                 className="btn btn-success"
                 onClick={() => addToCart({ id: 4, name: "Pizza", price: 350 })}
               >
-                Add to Cart
+                Add to Cart&nbsp;<i class="bi bi-cart-plus-fill"></i>
               </button>
             </div>
           </div>
@@ -294,7 +294,7 @@ const Food = () => {
                 className="btn btn-success"
                 onClick={() => addToCart({ id: 5, name: "Burger", price: 35 })}
               >
-                Add to Cart
+                Add to Cart&nbsp;<i class="bi bi-cart-plus-fill"></i>
               </button>
             </div>
           </div>
@@ -320,7 +320,7 @@ const Food = () => {
                   addToCart({ id: 6, name: "Chicken", price: 100 })
                 }
               >
-                Add to Cart
+                Add to Cart&nbsp;<i class="bi bi-cart-plus-fill"></i>
               </button>
             </div>
           </div>
@@ -330,7 +330,7 @@ const Food = () => {
       </div>
       <div className=" cart mt-4 shadow ">
         <div className="row p-5">
-          <h2>Cart</h2>
+          <h2><i class="bi bi-cart-check-fill"></i> &nbsp;Cart</h2>
 
           {cartItems.map((item) => (
             <div
@@ -370,7 +370,7 @@ const Food = () => {
 
       <div className="card-1 shadow mb-2">
         <div className="card-body p-5">
-          <h3 className="card-title">Order Summary</h3>
+          <h3 className="card-title"><i class="bi bi-brightness-high"></i> &nbsp;Order Summary</h3>
           <br></br>
           <p className="card-text-success">Total Quantity: {totalQuantity}</p>
           <p className="total-cost">
@@ -380,81 +380,86 @@ const Food = () => {
         </div>
       </div>
 
-      {/* Checkout Form */}
       <div className="mt-4 p-5">
-        <h2>Checkout</h2><form>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            value={userDetails.name}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="address" className="form-label">
-            Address
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="address"
-            name="address"
-            value={userDetails.address}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            value={userDetails.email}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="phoneNumber" className="form-label">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            className="form-control"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={userDetails.phoneNumber}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="  d-flex align-items-center justify-content-center">
-          {" "}
-          <button
-            className="btn btn-info text-center d-flex align-items-center justify-content-center"
-            onClick={handleCheckout}
-          >
-            Place Order
-          </button>{" "}
-          <div className="d-flex justify-content-end m-3">
-            <button
-              className="btn btn-danger m-2 ms-auto"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+  <h2>Checkout&nbsp;<i class="bi bi-bag-check-fill"></i></h2>
+  <div className="container">
+    <div className="row">
+      <div className="col-md-6">
+        <form>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">
+              Name
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="name"
+              value={userDetails.name}
+              onChange={handleInputChange}
+            />
           </div>
-        </div>
+          <div className="mb-3">
+            <label htmlFor="address" className="form-label">
+              Address
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="address"
+              name="address"
+              value={userDetails.address}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              name="email"
+              value={userDetails.email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="phoneNumber" className="form-label">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              className="form-control"
+              id="phoneNumber"
+              name="phoneNumber"
+              value={userDetails.phoneNumber}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="d-flex justify-content-start align-items-center">
+            <button
+              className="btn btn-info"
+              onClick={handleCheckout}
+            >
+              Place Order &nbsp;<i class="bi bi-shop"></i>
+            </button>
+            <div className="d-flex justify-content-end m-3">
+              <button
+                className="btn btn-danger m-2"
+                onClick={handleLogout}
+              >
+                Logout&nbsp;<i class="bi bi-box-arrow-right"></i>
+              </button>
+            </div>
+          </div>
         </form>
-        <br></br>&nbsp;
       </div>
+    </div>
+  </div>
+</div>
+
    
 
       <ToastContainer position="top-center" />

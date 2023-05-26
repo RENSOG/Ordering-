@@ -380,81 +380,86 @@ const Food = () => {
         </div>
       </div>
 
-      {/* Checkout Form */}
       <div className="mt-4 p-5">
-        <h2>Checkout</h2><form>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            value={userDetails.name}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="address" className="form-label">
-            Address
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="address"
-            name="address"
-            value={userDetails.address}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            name="email"
-            value={userDetails.email}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="phoneNumber" className="form-label">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            className="form-control"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={userDetails.phoneNumber}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="  d-flex align-items-center justify-content-center">
-          {" "}
-          <button
-            className="btn btn-info text-center d-flex align-items-center justify-content-center"
-            onClick={handleCheckout}
-          >
-            Place Order
-          </button>{" "}
-          <div className="d-flex justify-content-end m-3">
-            <button
-              className="btn btn-danger m-2 ms-auto"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+  <h2>Checkout</h2>
+  <div className="container">
+    <div className="row">
+      <div className="col-md-6">
+        <form>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">
+              Name
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="name"
+              value={userDetails.name}
+              onChange={handleInputChange}
+            />
           </div>
-        </div>
+          <div className="mb-3">
+            <label htmlFor="address" className="form-label">
+              Address
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="address"
+              name="address"
+              value={userDetails.address}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              name="email"
+              value={userDetails.email}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="phoneNumber" className="form-label">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              className="form-control"
+              id="phoneNumber"
+              name="phoneNumber"
+              value={userDetails.phoneNumber}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="d-flex justify-content-start align-items-center">
+            <button
+              className="btn btn-info"
+              onClick={handleCheckout}
+            >
+              Place Order
+            </button>
+            <div className="d-flex justify-content-end m-3">
+              <button
+                className="btn btn-danger m-2"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </div>
+          </div>
         </form>
-        <br></br>&nbsp;
       </div>
+    </div>
+  </div>
+</div>
+
    
 
       <ToastContainer position="top-center" />
